@@ -1,52 +1,148 @@
-# Personal Portfolio
+# 🚀 Personal Portfolio Website
 
-A premium React portfolio built with Vite, Tailwind CSS, Framer Motion, and React Router.
+A modern and responsive personal portfolio website built to showcase my projects, technical skills, and development journey as a Computer Science Engineering student.
 
-## Features
+Designed with a clean user interface, smooth animations, and modern web technologies to create an engaging experience across all devices.
 
-- Modern responsive landing page
-- SEO-friendly metadata and performance-focused structure
-- Animated hero, skill panels, projects, resume, and contact pages
-- Reusable component architecture
-- Optional backend API for contact form email delivery
+---
 
-## Setup
+# ✨ Features
 
-1. Install frontend dependencies:
+- Modern and fully responsive design
+- Smooth animations using Framer Motion
+- Interactive homepage, projects, resume, and contact sections
+- Professional dark-themed UI
+- Reusable component-based architecture
+- SEO-friendly structure and optimized performance
+- Backend-powered contact form with email functionality
+- Clean and scalable project structure
+- Fast development setup with Vite
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+- React.js
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Router DOM
+
+## Backend
+- Node.js
+- Express.js
+
+## Tools & Platforms
+- Git & GitHub
+- Vercel
+- SMTP Email Integration
+
+---
+
+# 📂 Website Sections
+
+- Home
+- About
+- Projects
+- Resume
+- Contact
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/your-repository-name.git
+```
+
+---
+
+## 2️⃣ Install Frontend Dependencies
 
 ```bash
 npm install
 ```
 
-2. Install server dependencies:
+---
+
+## 3️⃣ Install Backend Dependencies
 
 ```bash
 cd server
 npm install
 ```
 
-3. Start the frontend:
+---
+
+## 4️⃣ Start Frontend Development Server
 
 ```bash
 npm run dev
 ```
 
-4. Start the backend (in a separate terminal):
+---
+
+## 5️⃣ Start Backend Server
+
+Open another terminal and run:
 
 ```bash
 cd server
 npm run dev
 ```
 
-5. Configure email by copying `server/.env.example` to `server/.env` and setting your SMTP details.
+---
 
-## Build
+# 🔐 Environment Variables
+
+To configure email functionality:
+
+## Copy:
+
+```bash
+server/.env.example
+```
+
+## Create:
+
+```bash
+server/.env
+```
+---
+
+# 🏗️ Build for Production
 
 ```bash
 npm run build
 ```
 
-## Notes
+---
 
-- Update your personal information directly in `src/data/siteData.js` and component text.
-- Replace `public/resume.pdf` with your actual resume PDF file.
+# 📸 Project Highlights
+
+- Responsive modern portfolio design
+- Animated and interactive UI
+- Smooth page transitions
+- Organized and scalable code structure
+- Real-world full stack implementation
+- Clean and minimal user experience
+
+---
+
+# 🌐 Live Demo
+
+```
+
+---
+
+
+
+# 👨‍💻 Developer
+
+## Shiva Pradeep
+Computer Science Engineering Student & Full Stack Developer
+
+Passionate about building modern web applications, solving real-world problems, and continuously improving through hands-on development and learning.
