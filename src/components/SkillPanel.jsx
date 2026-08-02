@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 
 const skillSummaries = {
   Frontend: 'Interfaces, layout, and user interaction',
+  'AI / ML': 'Machine learning, retrieval, and language model workflows',
   Backend: 'APIs, server logic, and data handling',
   Database: 'Schema design and query performance',
   Tools: 'Workflow, versioning, and shipping',
@@ -10,6 +11,7 @@ const skillSummaries = {
 
 const skillSpans = {
   Frontend: 'xl:col-span-2',
+  'AI / ML': 'xl:col-span-2',
   Backend: 'xl:col-span-2',
   Database: 'xl:col-span-2',
   Tools: 'xl:col-span-3',

@@ -12,6 +12,10 @@ const focusTiles = [
     description: 'I like pages that feel deliberate, readable, and visually memorable without getting in the way.'
   },
   {
+    title: 'AI curiosity',
+    description: 'I am especially interested in AI and I keep learning core concepts by applying them in small projects and experiments.'
+  },
+  {
     title: 'Strong structure',
     description: 'I organize projects so features are easy to understand, extend, and maintain.'
   },
@@ -116,7 +120,7 @@ function HomePage() {
                   <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-5">
                     <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Current stack</p>
                     <div className="mt-4 flex flex-wrap gap-2">
-                      {['React', 'Node.js', 'Tailwind CSS', 'MySQL', 'Git'].map((item) => (
+                      {['Tailwind CSS', 'FastAPI', 'RAG', 'LLMs', 'PyTorch'].map((item) => (
                         <span key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200 transition duration-300 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-white">
                           {item}
                         </span>

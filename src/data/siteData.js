@@ -1,12 +1,14 @@
 export const heroPhrases = [
   'Computer Science Engineering Student',
   'Full Stack Web Developer',
+  'AI Enthusiast & Learner',
   'Problem Solver & Tech Enthusiast',
   'Building Real-World Web Applications'
 ];
 
 export const aboutHighlights = [
   'I like interfaces that feel cinematic at first glance but stay simple to use.',
+  'I am especially interested in AI and I know a few core AI concepts that I keep building on through projects and practice.',
   'My best projects combine clear UI, strong logic, and visible real-world value.',
   'I build with a systems mindset: maintainable code, clean structure, and practical delivery.',
   'Every new project is a chance to improve design, deployment, and product thinking.'
@@ -22,23 +24,27 @@ export const portfolioSnapshot = [
 export const skills = [
   {
     category: 'Frontend',
-    items: ['HTML', 'Bootstrap', 'CSS', 'JavaScript','React.js']
+    items: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'Next.js']
+  },
+  {
+    category: 'AI / ML',
+    items: ['ML', 'RAG', 'LLMs', 'Neural Networks', 'Deep Learning', 'Prompt Engineering', 'GenAI', 'LangChain', 'Transformers', 'Hugging Face', 'PyTorch', 'TensorFlow']
   },
   {
     category: 'Backend',
-    items: ['Node.js']
+    items: ['Express.js', 'FastAPI', 'Python', 'REST APIs']
   },
   {
     category: 'Database',
-    items: ['MySQL', 'Query Optimization', 'Database Modeling']
+    items: ['MySQL', 'MongoDB', 'PostgreSQL', 'ChromaDB']
   },
   {
     category: 'Tools',
-    items: ['Git', 'GitHub', 'Docker', 'VS Code']
+    items: ['Git', 'GitHub', 'Docker', 'VS Code', 'Postman']
   },
   {
     category: 'Cloud & Deployment',
-    items: ['Vercel']
+    items: ['Vercel', 'AWS', 'Netlify']
   }
 ];
 
@@ -53,21 +59,21 @@ export const projects = [
     featured: true
   },
   {
-    id: 'Mini CRM',
-    title: 'Client Lead Management System',
-    description: 'A simple CRM to manage client leads generated from website contact forms.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-    github: 'https://github.com',
-    live: '#',
+    id: 'AI Study Assistant',
+    title: 'AI Study Assistant RAG',
+    description: 'An AI-powered study assistant for engineering students that uses Retrieval-Augmented Generation (RAG) to answer questions from uploaded PDF documents using Google Gemini, LlamaIndex, ChromaDB, FastAPI, and React.js.',
+    tags: ['React', 'RAG', 'Node.js', 'Tailwind CSS'],
+    github: 'https://github.com/shiva12pra/ai-study-assistant-rag',
+    live: 'https://ai-study-assistant-rag.vercel.app',
     featured: true
   },
   {
-    id: 'Indoor Navigation',
-    title: 'Indoor Navigation Using Augmented Reality (AR)',
-    description: 'This project helps users navigate inside buildings like malls, hospitals, colleges, airports, or offices using AR directions through a mobile device.',
+    id: 'Industry AI',
+    title: 'Swaram Industry AI',
+    description: 'This modern React + TypeScript web app simulates an AI-agent-powered smart factory dashboard, showcasing real-time machine health, production flow, inventory, safety, and automated decision-making.',
     tags: ['Unity', 'C#', 'OpenCV', 'MongoDB','ARcore','Node.js'],
-    github: 'https://github.com',
-    live: '#',
+    github: 'https://github.com/shiva12pra/swaram-industry-ai',
+    live: 'https://swaram-industry-ai.vercel.app',
     featured: false
   },
   {
@@ -76,7 +82,7 @@ export const projects = [
     description: 'A personal portfolio website built using React.js to showcase projects, skills, and experience with a clean and responsive design.',
     tags: ['React.js', 'Node.js', 'CSS','HTML','JavaScript'],
     github: 'https://github.com/shiva12pra/FUTURE_FS_01',
-    live: '#',
+    live: 'https://shivapradeep.vercel.app',
     featured: false
   }
 ];
