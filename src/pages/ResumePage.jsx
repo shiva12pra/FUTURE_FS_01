@@ -9,33 +9,38 @@ const coreSkills = [
 
 function ResumePage() {
   return (
-    <div className="px-4 pt-4 pb-6 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
-        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
-          <div className="text-center">
-            <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl">
-            <span className="bg-gradient-to-r from-violet-400 to-blue-500 bg-clip-text text-transparent">My Resume</span>
-            </h1>
-            <p className="mt-4 text-base text-slate-400 sm:text-lg">A quick overview of my education, skills and highlights.</p>
+    <div className="px-4 pt-8 pb-10 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-lift backdrop-blur-xl">
+          <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Resume</p>
+          <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl">My Resume</h1>
+              <p className="mt-4 max-w-3xl text-base leading-8 text-slate-400 sm:text-lg">
+                A compact view of my education, technical stack, and the kind of work I want to keep building.
+              </p>
+            </div>
+            <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/70 px-5 py-4 text-sm text-slate-300">
+              Recruiter-friendly, project-focused, and easy to scan.
+            </div>
           </div>
         </motion.div>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_0.95fr]">
+        <div className="mt-8 grid gap-8 lg:grid-cols-[1.08fr_0.92fr]">
           <div className="space-y-8">
-            <div className="rounded-[2rem] border border-slate-800 bg-slate-900/95 p-8 shadow-soft">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-blue-500/10 text-blue-300">
-                    <FaGraduationCap />
-                  </span>
-                  <div>
-                    <p className="text-sm uppercase tracking-[0.3em] text-blue-300">Education</p>
-                  </div>
+            <div className="rounded-[2rem] border border-white/10 bg-slate-950/70 p-8 shadow-lift backdrop-blur-xl">
+              <div className="flex items-center gap-3">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-cyan-400/10 text-cyan-300">
+                  <FaGraduationCap />
+                </span>
+                <div>
+                  <p className="text-sm uppercase tracking-[0.35em] text-cyan-300">Education timeline</p>
+                  <h2 className="mt-2 text-2xl font-semibold text-white">The path so far</h2>
                 </div>
               </div>
 
               <div className="relative mt-8 pl-8">
-                <div className="absolute left-3 top-8 h-[calc(100%-2rem)] w-px bg-slate-800" />
+                <div className="absolute left-3 top-8 h-[calc(100%-2rem)] w-px bg-gradient-to-b from-cyan-400 via-fuchsia-500 to-transparent" />
                 <div className="space-y-6">
                   {resumeTimeline.map((entry) => (
                     <TimelineItem key={entry.year + entry.title} entry={entry} />
@@ -43,45 +48,52 @@ function ResumePage() {
                 </div>
               </div>
             </div>
+
+            <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-400/10 via-blue-500/10 to-fuchsia-500/10 p-8 shadow-lift backdrop-blur-xl">
+              <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Professional style</p>
+              <p className="mt-4 max-w-3xl text-slate-300 leading-8">
+                I want my resume and portfolio to communicate the same thing: strong fundamentals, a clean presentation, and work that feels practical instead of decorative.
+              </p>
+            </div>
           </div>
 
           <aside className="space-y-6">
-            <div className="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-8 shadow-soft">
-              <p className="text-sm uppercase tracking-[0.3em] text-blue-300">About My Resume</p>
-              <h2 className="mt-3 text-2xl font-semibold text-white">A snapshot of my journey and skills</h2>
+            <div className="rounded-[2rem] border border-white/10 bg-slate-950/70 p-8 shadow-lift backdrop-blur-xl">
+              <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">About my resume</p>
+              <h2 className="mt-4 text-2xl font-semibold text-white">A snapshot of my journey and skills</h2>
               <p className="mt-4 text-slate-400 leading-7">
-                My resume reflects my academic background, technical skills, project experience and the problem-solving mindset I bring to every challenge. I am always eager to learn, build and create impactful solutions.
+                My resume reflects my academic background, technical skills, and project experience. I keep adding work that shows how I think, how I build, and how I improve.
               </p>
             </div>
 
-            <div className="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-8 shadow-soft">
-              <p className="text-sm uppercase tracking-[0.3em] text-blue-300">Core Skills</p>
-              <div className="mt-6 grid grid-cols-2 gap-3 text-xs sm:grid-cols-3">
+            <div className="rounded-[2rem] border border-white/10 bg-slate-950/70 p-8 shadow-lift backdrop-blur-xl">
+              <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Core skills</p>
+              <div className="mt-6 flex flex-wrap gap-3">
                 {coreSkills.map((skill) => (
-                  <span key={skill} className="rounded-3xl border border-slate-800 bg-slate-950/90 px-3 py-2 text-slate-200 shadow-sm">
+                  <span key={skill} className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-200">
                     {skill}
                   </span>
                 ))}
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-slate-800 bg-slate-900/90 p-8 shadow-soft">
+            <div className="rounded-[2rem] border border-white/10 bg-slate-950/70 p-8 shadow-lift backdrop-blur-xl">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.3em] text-blue-300">Download Resume</p>
-                  <h2 className="mt-3 text-2xl font-semibold text-white">Download the full PDF</h2>
+                  <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Download resume</p>
+                  <h2 className="mt-3 text-2xl font-semibold text-white">Grab the PDF version</h2>
                 </div>
-                <div className="rounded-3xl bg-blue-500/10 px-3 py-2 text-sm font-semibold text-blue-300">
+                <div className="rounded-2xl border border-cyan-400/20 bg-cyan-400/10 px-3 py-2 text-sm font-semibold text-cyan-200">
                   PDF
                 </div>
               </div>
               <p className="mt-4 text-slate-400 leading-7">
-                Get a detailed overview of my skills, projects, and experience in a recruiter-ready format.
+                A more detailed recruiter-ready version with education, skills, and project highlights.
               </p>
               <a
                 href="/resume.pdf"
                 download
-                className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500 px-6 py-3 text-sm font-semibold text-white shadow-xl shadow-violet-500/20 transition hover:scale-[1.01]"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-fuchsia-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-glow transition hover:-translate-y-0.5"
               >
                 Download Resume (PDF)
               </a>

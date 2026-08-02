@@ -6,10 +6,17 @@ export const heroPhrases = [
 ];
 
 export const aboutHighlights = [
-  'Driven by system design, maintainability, and intuitive user workflows.',
-  'Experience using modern web technologies to build scalable interfaces.',
-  'Strong foundation in algorithms, SQL optimization, and software craftsmanship.',
-  'Continuously expanding skills with structured cloud and deployment pipelines.'
+  'I like interfaces that feel cinematic at first glance but stay simple to use.',
+  'My best projects combine clear UI, strong logic, and visible real-world value.',
+  'I build with a systems mindset: maintainable code, clean structure, and practical delivery.',
+  'Every new project is a chance to improve design, deployment, and product thinking.'
+];
+
+export const portfolioSnapshot = [
+  { label: 'Based in', value: 'Hyderabad, India' },
+  { label: 'Focus', value: 'Full stack + AI projects' },
+  { label: 'Current stage', value: 'B.Tech in CSE' },
+  { label: 'Goal', value: 'Build memorable products' }
 ];
 
 export const skills = [
@@ -79,19 +86,22 @@ export const resumeTimeline = [
     year: '2022',
     title: '10th Standard (SSC)',
     institution: 'Sloka The School, Hyderabad',
-    details: 'CGPA: 9.3/10.0'
+    details: 'CGPA: 9.3/10.0',
+    location: 'Hyderabad'
   },
   {
     year: '2022 - 2025',
     title: 'Polytechnic Diploma in Computer Science and Engineering',
     institution: 'Annamacharya Institute Of Technology And Sciences, Hyderabad',
-    details: 'CGPA: 9.3/10.0'
+    details: 'CGPA: 9.3/10.0',
+    location: 'Hyderabad'
   },
   {
     year: '2025 - 2028 (ongoing)',
     title: 'B.Tech in Computer Science and Engineering',
     institution: 'Institute of Aeronautical Engineering, Hyderabad',
-    details: 'CGPA: 8.2 / 10.0'
+    details: 'CGPA: 8.2 / 10.0',
+    location: 'Hyderabad'
   }
 ];
 

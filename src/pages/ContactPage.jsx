@@ -59,91 +59,82 @@ function ContactPage() {
   };
 
   return (
-    <div className="px-4 pt-4 pb-6 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-6xl">
-        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">Contact Me</h1>
-          <p className="mt-3 max-w-3xl text-slate-400 leading-8">
-            Let&apos;s connect and build something amazing together! I&apos;m always open to new ideas, collaborations, and opportunities.
+    <div className="px-4 pt-8 pb-10 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-lift backdrop-blur-xl">
+          <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Contact</p>
+          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">Let&apos;s connect and build something memorable.</h1>
+          <p className="mt-4 max-w-3xl text-slate-400 leading-8">
+            If the project is interesting, practical, or ambitious, I&apos;m happy to talk. The fastest way to reach me is by email, but the form works too.
           </p>
         </motion.div>
 
-        <div className="mt-6 grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="rounded-[2rem] border border-slate-800/90 bg-slate-900/95 p-5 shadow-soft">
-            <div className="space-y-4">
-              <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-blue-300">Let&apos;s Connect</p>
-                <h2 className="mt-4 text-3xl font-semibold text-white">I&apos;m always open to discussing new opportunities, collaborations, or interesting projects.</h2>
-                <p className="mt-4 text-slate-400 leading-7">Feel free to reach out anytime — I reply quickly to messages that are project-ready and goal-oriented.</p>
-              </div>
+        <div className="mt-8 grid gap-6 lg:grid-cols-[0.94fr_1.06fr]">
+          <div className="space-y-6 rounded-[2rem] border border-white/10 bg-slate-950/70 p-6 shadow-lift backdrop-blur-xl">
+            <div>
+              <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Let&apos;s connect</p>
+              <h2 className="mt-4 text-3xl font-semibold text-white">I&apos;m open to internships, collaborations, and interesting product work.</h2>
+              <p className="mt-4 text-slate-400 leading-7">I reply quickly to messages that are clear about the goal, timeline, and what needs to be built.</p>
+            </div>
 
-              <div className="space-y-3">
-                <div className="rounded-3xl border border-slate-800/90 bg-slate-950/90 p-4 shadow-sm">
-                  <div className="flex items-center gap-4">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-300">
-                      <FaEnvelope />
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-white">Email</p>
-                      <a href={`mailto:${emailAddress}`} className="mt-1 text-sm text-slate-400 hover:text-white">{emailAddress}</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="rounded-3xl border border-slate-800/90 bg-slate-950/90 p-5 shadow-sm">
-                  <div className="flex items-center gap-4">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-300">
-                      <FaLinkedin />
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-white">LinkedIn</p>
-                      <a href={linkedInUrl} target="_blank" rel="noreferrer" className="mt-1 text-sm text-slate-400 hover:text-white">linkedin.com/in/nadikudi-shiva-pradeep-42734a320</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="rounded-3xl border border-slate-800/90 bg-slate-950/90 p-5 shadow-sm">
-                  <div className="flex items-center gap-4">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-violet-500/10 text-violet-300">
-                      <FaGithub />
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-white">GitHub</p>
-                      <a href={githubUrl} target="_blank" rel="noreferrer" className="mt-1 text-sm text-slate-400 hover:text-white">github.com/shiva12pra</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="rounded-3xl border border-slate-800/90 bg-slate-950/90 p-5 shadow-sm">
-                  <div className="flex items-center gap-4">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-300">
-                      <FaMapMarkerAlt />
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-white">Location</p>
-                      <p className="mt-1 text-sm text-slate-400">India</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-3xl border border-slate-800/90 bg-slate-950/90 p-5 shadow-sm">
-                <div className="flex items-center justify-between gap-4">
+            <div className="grid gap-4">
+              <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
+                <div className="flex items-center gap-4">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300"><FaEnvelope /></span>
                   <div>
-                    <p className="text-sm font-semibold text-white">Available for Opportunities</p>
-                    <p className="mt-2 text-sm text-slate-400">Open to internships, full-time roles and exciting projects.</p>
+                    <p className="text-sm font-semibold text-white">Email</p>
+                    <a href={`mailto:${emailAddress}`} className="mt-1 text-sm text-slate-400 transition hover:text-white">{emailAddress}</a>
                   </div>
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-300">
-                    <FaTelegramPlane />
-                  </span>
                 </div>
+              </div>
+              <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
+                <div className="flex items-center gap-4">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300"><FaLinkedin /></span>
+                  <div>
+                    <p className="text-sm font-semibold text-white">LinkedIn</p>
+                    <a href={linkedInUrl} target="_blank" rel="noreferrer" className="mt-1 text-sm text-slate-400 transition hover:text-white">linkedin.com/in/nadikudi-shiva-pradeep-42734a320</a>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
+                <div className="flex items-center gap-4">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300"><FaGithub /></span>
+                  <div>
+                    <p className="text-sm font-semibold text-white">GitHub</p>
+                    <a href={githubUrl} target="_blank" rel="noreferrer" className="mt-1 text-sm text-slate-400 transition hover:text-white">github.com/shiva12pra</a>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-4">
+                <div className="flex items-center gap-4">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300"><FaMapMarkerAlt /></span>
+                  <div>
+                    <p className="text-sm font-semibold text-white">Location</p>
+                    <p className="mt-1 text-sm text-slate-400">India</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-[1.5rem] border border-cyan-400/20 bg-cyan-400/10 p-5">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <p className="text-sm font-semibold text-white">Available for opportunities</p>
+                  <p className="mt-2 text-sm text-slate-300">Open to internships, full-time roles, and exciting projects.</p>
+                </div>
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-cyan-200">
+                  <FaTelegramPlane />
+                </span>
               </div>
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-slate-800/90 bg-slate-900/95 p-5 shadow-soft">
-            <div className="mb-5">
-              <p className="text-sm uppercase tracking-[0.3em] text-blue-300">Send Me a Message</p>
-              <h2 className="mt-4 text-3xl font-semibold text-white">Let&apos;s work together on your next idea.</h2>
+          <div className="rounded-[2rem] border border-white/10 bg-slate-950/70 p-6 shadow-lift backdrop-blur-xl">
+            <div className="mb-6">
+              <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Send me a message</p>
+              <h2 className="mt-4 text-3xl font-semibold text-white">Tell me what you want to build.</h2>
             </div>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid gap-4 sm:grid-cols-2">
                 <label className="block">
                   <span className="text-sm font-medium text-slate-300">Your Name</span>
@@ -152,7 +143,7 @@ function ContactPage() {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    className="mt-2 w-full rounded-3xl border border-slate-800 bg-slate-950 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
+                    className="mt-2 w-full rounded-[1.25rem] border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-400/15"
                     placeholder="Your name"
                     required
                   />
@@ -164,7 +155,7 @@ function ContactPage() {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    className="mt-2 w-full rounded-3xl border border-slate-800 bg-slate-950 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
+                    className="mt-2 w-full rounded-[1.25rem] border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-400/15"
                     placeholder="name@example.com"
                     required
                   />
@@ -177,7 +168,7 @@ function ContactPage() {
                   name="subject"
                   value={form.subject}
                   onChange={handleChange}
-                  className="mt-2 w-full rounded-3xl border border-slate-800 bg-slate-950 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
+                  className="mt-2 w-full rounded-[1.25rem] border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-400/15"
                   placeholder="What would you like to discuss?"
                   required
                 />
@@ -186,10 +177,10 @@ function ContactPage() {
                 <span className="text-sm font-medium text-slate-300">Your Message</span>
                 <textarea
                   name="message"
-                  rows="5"
+                  rows="6"
                   value={form.message}
                   onChange={handleChange}
-                  className="mt-2 w-full rounded-3xl border border-slate-800 bg-slate-950 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
+                  className="mt-2 w-full rounded-[1.5rem] border border-white/10 bg-slate-950/80 px-4 py-3 text-sm text-slate-100 outline-none transition focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-400/15"
                   placeholder="Tell me about your project, timeline, and goals."
                   required
                 />
@@ -201,7 +192,7 @@ function ContactPage() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="inline-flex items-center justify-center rounded-full bg-blue-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-blue-300 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-fuchsia-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {submitting ? 'Sending...' : 'Send Message'}
                 </button>
@@ -210,20 +201,20 @@ function ContactPage() {
           </div>
         </div>
 
-        <div className="mt-6 rounded-[2rem] border border-slate-800/90 bg-slate-950/90 p-5 shadow-soft">
+        <div className="mt-6 rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-lift backdrop-blur-xl">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="text-sm text-slate-400">Prefer email?</p>
               <p className="mt-2 text-white">
                 Drop me a mail at{' '}
-                <a href={`mailto:${emailAddress}`} className="font-semibold text-blue-300 hover:text-blue-200">{emailAddress}</a>
+                <a href={`mailto:${emailAddress}`} className="font-semibold text-cyan-300 transition hover:text-white">{emailAddress}</a>
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3">
               <button
                 type="button"
                 onClick={copyEmail}
-                className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-blue-400 hover:text-white"
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-950/70 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400/40 hover:text-white"
               >
                 <FaCopy />
                 Copy Email

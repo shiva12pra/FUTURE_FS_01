@@ -1,175 +1,243 @@
 ﻿import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
+import { FaArrowRight, FaDownload, FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';
+import useTypewriter from '../hooks/useTypewriter';
 import { heroPhrases, aboutHighlights, skills, projects, contactLinks } from '../data/siteData';
 import SkillPanel from '../components/SkillPanel';
 import ProjectCard from '../components/ProjectCard';
 
+const focusTiles = [
+  {
+    title: 'Interface polish',
+    description: 'I like pages that feel deliberate, readable, and visually memorable without getting in the way.'
+  },
+  {
+    title: 'Strong structure',
+    description: 'I organize projects so features are easy to understand, extend, and maintain.'
+  },
+  {
+    title: 'Practical delivery',
+    description: 'I focus on building things that can be shown, explained, and used in real contexts.'
+  },
+  {
+    title: 'Clear communication',
+    description: 'I try to make every project easy to skim so the important parts stand out fast.'
+  }
+];
+
 function HomePage() {
+  const role = useTypewriter(heroPhrases, 85, 1500);
+
   return (
-    <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-indigo-950 text-slate-100">
-      {/* HERO */}
-      <section className="relative overflow-hidden">
-        <div className="absolute right-12 top-12 h-[420px] w-[420px] rounded-full bg-gradient-to-br from-fuchsia-700 via-blue-700 to-cyan-600 opacity-30 blur-3xl" />
-        <div className="relative z-10 mx-auto max-w-6xl px-6 pt-4 pb-12 lg:pt-6 lg:pb-14">
-          <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-x-6">
-            <motion.div
-              initial={{ opacity: 0, x: -24 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
-              className="space-y-4"
-            >             
-              <p className="text-sm text-slate-300">Hi, I&apos;m <span className="inline-block ml-1">👋</span></p>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight">
+    <div className="text-slate-100">
+      <section className="relative overflow-hidden px-4 pb-14 pt-4 sm:px-6 lg:px-8 lg:pt-6">
+        <div className="absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.14),_transparent_28%),radial-gradient(circle_at_80%_16%,_rgba(217,70,239,0.10),_transparent_24%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.08),_transparent_24%)]" />
+        <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="space-y-7"
+          >
+            <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.35em] text-cyan-200 shadow-lift backdrop-blur-xl">
+              <span className="h-2.5 w-2.5 rounded-full bg-cyan-300" />
+              Portfolio / CSE / Full Stack
+            </div>
+
+            <div className="space-y-4">
+              <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Hi, I am</p>
+              <h1 className="max-w-4xl text-5xl font-bold leading-[0.92] text-white sm:text-6xl md:text-7xl lg:text-8xl">
                 Shiva Pradeep
               </h1>
-              <p className="text-lg text-slate-300 max-w-xl">
-                <span className="text-fuchsia-400 font-semibold">Computer Science Engineering Student</span>
-                <span className="block text-slate-200 font-medium"> Full Stack Web Developer</span>
+              <p className="max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
+                <span className="block text-cyan-300">{role || heroPhrases[0]}</span>
+                <span className="mt-2 block text-slate-200">
+                  I build polished interfaces, useful products, and AI-focused projects that explain my work quickly and clearly.
+                </span>
               </p>
+            </div>
 
-              <p className="text-base text-slate-300 max-w-2xl">
-                I build modern, responsive and user-friendly web applications and AI-based solutions that solve real-world problems. I love turning ideas into impactful digital experiences.
-              </p>
+            <p className="max-w-2xl text-base leading-8 text-slate-400">
+              This portfolio is designed so someone can understand my background, my stack, the kind of work I build, and how to contact me within a few seconds.
+            </p>
 
-              <div className="flex flex-wrap items-center gap-4">
-                <Link to="/projects" className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-fuchsia-600 to-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:scale-105 transition">
-                  View Projects
-                </Link>
-                <a href="/resume.pdf" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-100 hover:bg-white/5 transition">
-                  <FaDownload />
-                  Download Resume
-                </a>
-                <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold text-slate-100 hover:bg-white/5 transition">
-                  Contact Me
-                </Link>
-              </div>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link
+                to="/projects"
+                className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-fuchsia-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-glow transition duration-300 hover:-translate-y-0.5"
+              >
+                Explore Projects <FaArrowRight />
+              </Link>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400/30 hover:bg-cyan-400/10"
+              >
+                <FaDownload /> Download Resume
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-950/70 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-fuchsia-400/30 hover:bg-fuchsia-400/10"
+              >
+                Contact Me
+              </Link>
+            </div>
+          </motion.div>
 
-              <div className="mt-6 flex items-center gap-4">
-                <span className="text-sm text-slate-300">Connect with me</span>
-                <div className="flex items-center gap-3">
-                  <a href={contactLinks.find(c => c.label.toLowerCase().includes('github'))?.value || '#'} target="_blank" rel="noreferrer" className="text-slate-200 hover:text-white">
-                    <FaGithub className="h-5 w-5" />
-                  </a>
-                  <a href={contactLinks.find(c => c.label.toLowerCase().includes('linkedin'))?.value || '#'} target="_blank" rel="noreferrer" className="text-slate-200 hover:text-white">
-                    <FaLinkedin className="h-5 w-5" />
-                  </a>
-                  <a href={contactLinks.find(c => c.label.toLowerCase().includes('email'))?.value || 'mailto:hi@example.com'} className="text-slate-200 hover:text-white">
-                    <FaEnvelope className="h-5 w-5" />
-                  </a>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7 }}
+            className="relative"
+          >
+            <div className="absolute -left-10 top-10 h-40 w-40 rounded-full bg-cyan-400/15 blur-3xl" />
+            <div className="absolute -right-10 bottom-10 h-52 w-52 rounded-full bg-fuchsia-500/15 blur-3xl" />
+            <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-lift backdrop-blur-xl sm:p-4 lg:min-h-[520px]">
+              <div className="grid gap-3 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
+                <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950/80">
+                  <img
+                    src="/profile.jpg"
+                    alt="Shiva Pradeep"
+                    onError={(event) => {
+                      event.currentTarget.onerror = null;
+                      event.currentTarget.src = '/profile.svg';
+                    }}
+                    className="h-[300px] w-full object-cover object-top sm:h-[360px] lg:h-full lg:min-h-[492px]"
+                  />
                 </div>
-              </div>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7 }}
-              className="flex justify-center lg:justify-end"
-            >
-              <div className="relative w-full max-w-lg">
-                {/* circular backdrop */}
-                <div className="absolute -left-24 top-12 h-64 w-64 rounded-full bg-gradient-to-br from-blue-700 to-fuchsia-600 opacity-90" />
-                {/* dotted pattern */}
-                <svg className="absolute right-6 top-6 h-20 w-20 opacity-20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <pattern id="dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-                      <circle cx="1" cy="1" r="1" fill="#7c3aed" />
-                    </pattern>
-                  </defs>
-                  <rect width="100" height="100" fill="url(#dots)" />
-                </svg>
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                  <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-5 sm:col-span-2 lg:col-span-1">
+                    <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Instant read</p>
+                    <p className="mt-3 text-2xl font-semibold leading-tight text-white">CSE student, full stack builder, and problem solver.</p>
+                  </div>
 
-                <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 p-4 shadow-2xl">
-                  <div className="overflow-hidden rounded-2xl bg-slate-800">
-                    <img
-                      src="/profile.jpg"
-                      alt="Pradeep"
-                      onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/profile.svg'; }}
-                      className="w-full h-[460px] object-cover block"
-                    />
+                  <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-5">
+                    <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Current stack</p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {['React', 'Node.js', 'Tailwind CSS', 'MySQL', 'Git'].map((item) => (
+                        <span key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200 transition duration-300 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-white">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-5">
+                    <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Open to</p>
+                    <p className="mt-3 text-sm leading-7 text-slate-300">
+                      Internships, collaborative projects, and product work where design, logic, and delivery all matter.
+                    </p>
+                  </div>
+
+                  <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-5 sm:col-span-2 lg:col-span-1">
+                    <div className="flex items-center gap-3 text-sm text-slate-300">
+                      <FaMapMarkerAlt className="text-cyan-300" />
+                      Hyderabad, India
+                    </div>
+                    <div className="mt-4 flex items-center gap-3">
+                      <a href={contactLinks.find((link) => link.label === 'GitHub')?.value || '#'} target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-slate-200 transition hover:border-cyan-400/30 hover:text-white">
+                        <FaGithub />
+                      </a>
+                      <a href={contactLinks.find((link) => link.label === 'LinkedIn')?.value || '#'} target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-slate-200 transition hover:border-cyan-400/30 hover:text-white">
+                        <FaLinkedin />
+                      </a>
+                      <a href={contactLinks.find((link) => link.label === 'Email')?.value || 'mailto:hello@example.com'} className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-slate-200 transition hover:border-cyan-400/30 hover:text-white">
+                        <FaEnvelope />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* ABOUT SECTION */}
-      <section className="bg-slate-950 px-6 py-20">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white">About Me</h2>
-            <p className="mt-4 text-slate-300 max-w-3xl mx-auto">Get to know more about my background, skills, and the way I build thoughtful digital experiences.</p>
-          </div>
-
-          <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-            <div className="rounded-[2rem] border border-slate-800 bg-slate-900/70 p-8 shadow-xl shadow-slate-950/20">
-              <p className="text-sm uppercase tracking-widest text-fuchsia-400">Who I Am</p>
-              <h3 className="mt-4 text-3xl font-semibold text-white">I’m a Computer Science Engineering student passionate about full stack development and AI-based applications.</h3>
+      <section className="px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-lift backdrop-blur-xl">
+              <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">About me</p>
+              <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">I care about clean systems and clear presentation.</h2>
               <div className="mt-6 space-y-4 text-slate-300 leading-7">
-                <p>I enjoy building real-world projects with modern technologies, crafting user-friendly web applications that solve problems and feel polished.</p>
-                <p>My work focuses on clean code, strong collaboration, and intelligent interfaces that scale from prototype to production.</p>
-                <p>I’m always eager to learn, explore new tools, and deliver solutions that make an impact.</p>
+                {aboutHighlights.map((line) => (
+                  <p key={line}>{line}</p>
+                ))}
               </div>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="rounded-[2rem] border border-slate-800 bg-slate-900/70 p-6 shadow-lg shadow-slate-950/15">
-                <p className="text-xs uppercase tracking-widest text-fuchsia-300">Education</p>
-                <h4 className="mt-4 text-xl font-semibold text-white">B.Tech in CSE</h4>
-                <p className="mt-3 text-sm text-slate-400">2025 - 2028</p>
-                <p className="mt-2 text-sm text-slate-400">Institute of Aeronautical Engineering</p>
-              </div>
-
-              <div className="rounded-[2rem] border border-slate-800 bg-slate-900/70 p-6 shadow-lg shadow-slate-950/15">
-                <p className="text-xs uppercase tracking-widest text-fuchsia-300">Skills</p>
-                <h4 className="mt-4 text-xl font-semibold text-white">Technical Stack</h4>
-                <div className="mt-4 space-y-2 text-sm text-slate-300">
-                  <p>Java, HTML, CSS, JavaScript, React</p>
-                  <p>Node.js, MySQL</p>
-                  <p>Git, Tailwind CSS</p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {focusTiles.map((tile, index) => (
+                <motion.div
+                  key={tile.title}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.45, delay: index * 0.05 }}
+                  className="rounded-[1.75rem] border border-white/10 bg-slate-950/70 p-6 shadow-lift backdrop-blur-xl"
+                >
+                  <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">{index < 9 ? `0${index + 1}` : index + 1}</p>
+                  <h3 className="mt-4 text-xl font-semibold text-white">{tile.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-slate-400">{tile.description}</p>
+                </motion.div>
+              ))}
+              <div className="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-cyan-400/10 via-blue-500/10 to-fuchsia-500/10 p-6 shadow-lift backdrop-blur-xl sm:col-span-2">
+                <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">What I value</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {['Clarity', 'Speed', 'Useful design', 'Strong logic', 'Clean delivery'].map((item) => (
+                    <span key={item} className="rounded-full border border-white/10 bg-slate-950/70 px-4 py-2 text-sm text-slate-200">
+                      {item}
+                    </span>
+                  ))}
                 </div>
               </div>
-
-              <div className="rounded-[2rem] border border-slate-800 bg-slate-900/70 p-6 shadow-lg shadow-slate-950/15">
-                <p className="text-xs uppercase tracking-widest text-fuchsia-300">Interests</p>
-                <h4 className="mt-4 text-xl font-semibold text-white">What I Love</h4>
-                <ul className="mt-4 space-y-2 text-sm text-slate-300">
-                  <li>Web Development</li>
-                  <li>AI & Machine Learning</li>
-                  <li>Problem Solving</li>
-                  <li>Learning new skills</li>
-                  <li>Playing Cricket</li>
-                  <li>Listening to Music</li>
-                </ul>
-              </div>
-
-              <div className="rounded-[2rem] border border-slate-800 bg-slate-900/70 p-6 shadow-lg shadow-slate-950/15">
-                <p className="text-xs uppercase tracking-widest text-fuchsia-300">Projects</p>
-                <h4 className="mt-4 text-4xl font-bold text-white">4+</h4>
-                <p className="mt-3 text-sm text-slate-300">Projects Completed</p>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-slate-900 px-6 py-16">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center mb-10">
-            <p className="text-sm font-semibold uppercase tracking-widest text-fuchsia-400">Projects</p>
-            <h3 className="mt-4 text-3xl font-bold text-white">Selected Highlights</h3>
+      <section className="px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Skill architecture</p>
+              <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">The stack I use to ship ideas</h2>
+              <p className="mt-3 max-w-xl text-sm leading-7 text-slate-400 sm:text-base">
+                A focused set of tools, organized by the part of the product they help me ship. This keeps the page easier to scan and the stack easier to trust.
+              </p>
+            </div>
+            <div className="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-300 shadow-lift backdrop-blur-xl">
+              Focused stack, faster delivery
+            </div>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-5 lg:grid-cols-2 xl:grid-cols-6">
+            {skills.map((skill) => (
+              <SkillPanel key={skill.category} skill={skill} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-14 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Selected work</p>
+              <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">Projects that show how I think</h2>
+            </div>
+            <Link to="/projects" className="inline-flex items-center gap-2 text-sm font-medium text-cyan-200 transition hover:text-white">
+              View all projects <FaArrowRight />
+            </Link>
+          </div>
+          <div className="grid gap-6 xl:grid-cols-2">
             {projects.slice(0, 4).map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         </div>
       </section>
-
     </div>
   );
 }
