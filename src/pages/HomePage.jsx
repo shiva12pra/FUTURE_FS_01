@@ -107,7 +107,7 @@ function HomePage() {
                       event.currentTarget.onerror = null;
                       event.currentTarget.src = '/profile.svg';
                     }}
-                    className="h-[300px] w-full object-cover object-top sm:h-[360px] lg:h-full lg:min-h-[492px]"
+                    className="h-[320px] w-full object-contain object-center sm:h-[360px] sm:object-cover sm:object-top lg:h-full lg:min-h-[492px]"
                   />
                 </div>
 
