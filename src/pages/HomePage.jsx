@@ -12,8 +12,8 @@ const focusTiles = [
     description: 'I like pages that feel deliberate, readable, and visually memorable without getting in the way.'
   },
   {
-    title: 'AI curiosity',
-    description: 'I am especially interested in AI and I keep learning core concepts by applying them in small projects and experiments.'
+    title: 'Curiosity',
+    description: 'I keep learning by applying new ideas in small projects and experiments.'
   },
   {
     title: 'Strong structure',
@@ -34,7 +34,7 @@ function HomePage() {
 
   return (
     <div className="text-slate-100">
-      <section className="relative overflow-hidden px-4 pb-14 pt-4 sm:px-6 lg:px-8 lg:pt-6">
+      <section className="relative overflow-hidden px-4 pb-14 pt-0 sm:px-6 sm:pt-2 lg:px-8 lg:pt-3">
         <div className="absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(circle_at_top_left,_rgba(34,211,238,0.14),_transparent_28%),radial-gradient(circle_at_80%_16%,_rgba(217,70,239,0.10),_transparent_24%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.08),_transparent_24%)]" />
         <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <motion.div
@@ -45,7 +45,7 @@ function HomePage() {
           >
             <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.35em] text-cyan-200 shadow-lift backdrop-blur-xl">
               <span className="h-2.5 w-2.5 rounded-full bg-cyan-300" />
-              Portfolio / CSE / Full Stack
+              Portfolio / Full Stack
             </div>
 
             <div className="space-y-4">
@@ -56,7 +56,7 @@ function HomePage() {
               <p className="max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
                 <span className="block text-cyan-300">{role || heroPhrases[0]}</span>
                 <span className="mt-2 block text-slate-200">
-                  I build polished interfaces, useful products, and AI-focused projects that explain my work quickly and clearly.
+                  I build polished interfaces and useful products that explain my work quickly and clearly.
                 </span>
               </p>
             </div>
@@ -114,13 +114,13 @@ function HomePage() {
                 <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
                   <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-5 sm:col-span-2 lg:col-span-1">
                     <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Instant read</p>
-                    <p className="mt-3 text-2xl font-semibold leading-tight text-white">CSE student, full stack builder, and problem solver.</p>
+                    <p className="mt-3 text-2xl font-semibold leading-tight text-white">Full stack builder and problem solver.</p>
                   </div>
 
                   <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-5">
                     <p className="text-xs uppercase tracking-[0.35em] text-cyan-300">Current stack</p>
                     <div className="mt-4 flex flex-wrap gap-2">
-                      {['Tailwind CSS', 'FastAPI', 'RAG', 'LLMs', 'PyTorch'].map((item) => (
+                      {['Tailwind CSS', 'React', 'Node.js', 'FastAPI', 'PostgreSQL'].map((item) => (
                         <span key={item} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200 transition duration-300 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-white">
                           {item}
                         </span>

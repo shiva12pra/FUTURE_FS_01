@@ -1,14 +1,11 @@
 export const heroPhrases = [
-  'Computer Science Engineering Student',
   'Full Stack Web Developer',
-  'AI Enthusiast & Learner',
   'Problem Solver & Tech Enthusiast',
   'Building Real-World Web Applications'
 ];
 
 export const aboutHighlights = [
   'I like interfaces that feel cinematic at first glance but stay simple to use.',
-  'I am especially interested in AI and I know a few core AI concepts that I keep building on through projects and practice.',
   'My best projects combine clear UI, strong logic, and visible real-world value.',
   'I build with a systems mindset: maintainable code, clean structure, and practical delivery.',
   'Every new project is a chance to improve design, deployment, and product thinking.'
@@ -16,8 +13,8 @@ export const aboutHighlights = [
 
 export const portfolioSnapshot = [
   { label: 'Based in', value: 'Hyderabad, India' },
-  { label: 'Focus', value: 'Full stack + AI projects' },
-  { label: 'Current stage', value: 'B.Tech in CSE' },
+  { label: 'Focus', value: 'Full stack web projects' },
+  { label: 'Current stage', value: 'B.Tech student' },
   { label: 'Goal', value: 'Build memorable products' }
 ];
 
@@ -27,8 +24,8 @@ export const skills = [
     items: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'Next.js']
   },
   {
-    category: 'AI / ML',
-    items: ['ML', 'RAG', 'LLMs', 'Neural Networks', 'Deep Learning', 'Prompt Engineering', 'GenAI', 'LangChain', 'Transformers', 'Hugging Face', 'PyTorch', 'TensorFlow']
+    category: 'Core Development',
+    items: ['REST APIs', 'Authentication', 'State Management', 'Performance', 'Testing', 'Architecture', 'Debugging']
   },
   {
     category: 'Backend',

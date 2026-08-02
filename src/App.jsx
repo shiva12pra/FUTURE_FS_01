@@ -27,7 +27,7 @@ function App() {
               </span>
               <div className="leading-tight">
                 <p className="text-base font-semibold text-white">Shiva Pradeep</p>
-                <p className="text-xs text-slate-400">CSE student, full stack builder</p>
+                <p className="text-xs text-slate-400">Full stack builder</p>
               </div>
             </NavLink>
 
