@@ -56,7 +56,7 @@ export const projects = [
     featured: true
   },
   {
-    id: 'AI Study Assistant',
+    id: 'Academic RAG Assistant',
     title: 'AI Study Assistant RAG',
     description: 'An AI-powered study assistant for engineering students that uses Retrieval-Augmented Generation (RAG) to answer questions from uploaded PDF documents using Google Gemini, LlamaIndex, ChromaDB, FastAPI, and React.js.',
     tags: ['React', 'RAG', 'Node.js', 'Tailwind CSS'],
